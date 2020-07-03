@@ -35,6 +35,10 @@ public class BalancedBrackets {
                     brackets--;
                 }
             }
+
+            if (str.equals("") || (!str.contains("[")) && !str.contains("]")) {
+                return true;
+            }
         }
         return brackets == 0 && (idx == 0 || closeIdx > openIdx);
     }

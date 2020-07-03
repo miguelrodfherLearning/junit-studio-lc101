@@ -7,42 +7,49 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class BalancedBracketsTest {
-
-    //TODO: add tests here
     BalancedBrackets test_Class;
 
     public void createBracketObject() {
         test_Class = new BalancedBrackets();
     }
 
+    //TODO: add tests here
+    @Test
+    public void emptyTest() {
+        assertEquals(true, true);
+    }
+
     @Test
     public void balancedBracketsReturnsTrue() {
-        assertTrue(test_Class.hasBalancedBrackets("[]"));
-        assertTrue(test_Class.hasBalancedBrackets("Launch[Code]"));
-        assertTrue(test_Class.hasBalancedBrackets(""));
-        assertTrue(test_Class.hasBalancedBrackets("[Miguel][Code]"));
-        assertTrue(test_Class.hasBalancedBrackets("[]Rodriguez"));
-        assertTrue(test_Class.hasBalancedBrackets("[Miguel [Rodriguez] Code]"));
-        assertTrue(test_Class.hasBalancedBrackets("[]"));
-        assertTrue(test_Class.hasBalancedBrackets(""));
-        assertTrue(test_Class.hasBalancedBrackets("[][]"));
-        assertTrue(test_Class.hasBalancedBrackets("[Launch Code] [Launch Code]"));
-        assertTrue(test_Class.hasBalancedBrackets("[Launch Code [Launch]][]"));
-        assertTrue(test_Class.hasBalancedBrackets("[Launch Code [Launch] [Code]]"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[]"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("Launch[Code]"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets(""));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[Miguel][Code]"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[]Rodriguez"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[Miguel [Rodriguez] Code]"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[]"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets(""));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[][]"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[Launch Code] [Launch Code]"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[Launch Code [Launch]][]"));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[Launch Code [Launch] [Code]]"));
     }
 
     @Test
     public void balancedBracketsReturnFalse() {
-        assertFalse(test_Class.hasBalancedBrackets("['a'"));
-        assertFalse(test_Class.hasBalancedBrackets("[Miguel's Code] [Rodriguez"));
-        assertFalse(test_Class.hasBalancedBrackets("['a'"));
-        assertFalse(test_Class.hasBalancedBrackets("]["));
-        assertFalse(test_Class.hasBalancedBrackets("[HelloPeople"));
-        assertFalse(test_Class.hasBalancedBrackets("Hello]People["));
-        assertFalse(test_Class.hasBalancedBrackets("["));
-        assertFalse(test_Class.hasBalancedBrackets("]"));
-        assertFalse(test_Class.hasBalancedBrackets("[[]"));
-        assertFalse(test_Class.hasBalancedBrackets("[Hello World] [Hello "));
+
+        assertFalse(BalancedBrackets.hasBalancedBrackets("['a'"));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[Miguel's Code] [Rodriguez"));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("['a'"));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]["));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[HelloPeople"));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("Hello]People["));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("["));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("]"));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[[]"));
+        assertFalse(BalancedBrackets.hasBalancedBrackets("[Hello World] [Hello "));
+        assertTrue(BalancedBrackets.hasBalancedBrackets("[L][a][u][n][c]][[h][C][o][d][e]"));
+
 
     }
 
